@@ -27,7 +27,7 @@ function App() {
         key: 'employee_website',
         render:(value)=>{
           const link = 'http://' + value
-          return <a href={link} target="_blank">{link}</a>
+          return <a href={link} rel="noreferrer" target="_blank">{link}</a>
         },
       },
       {
@@ -113,7 +113,7 @@ function App() {
                }}
                rowClassName={(record, index) => {
 
-                 if (selectedRecord && selectedRecord.id == record.id) {
+                 if (selectedRecord && selectedRecord.id === record.id) {
                    return 'selectRow'
                  }
                }}
